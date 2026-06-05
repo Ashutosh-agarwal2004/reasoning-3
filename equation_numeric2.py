@@ -299,7 +299,9 @@ def _apply_op(found: FoundOp, a_str: str, b_str: str) -> tuple[str, list[str]]:
         old = final
         final = found.op_char + final[1:]
         steps.append(
-            f"{old} -> 【{final}】"
+            #f"Result is negative and op_char 【{found.op_char}】 is the subtraction symbol — "
+            #f"replacing '-' with 【{found.op_char}】: {old} -> 【{final}】"
+            f"{old} -> 【{final}"
         )
 
     return final, steps
