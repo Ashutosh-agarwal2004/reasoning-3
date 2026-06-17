@@ -1,0 +1,788 @@
+id,prompt,answer,category,num_examples,example_symbols,example_char_operation_mapping,example_char_operation_mapping_json,question_char_operation_mapping,question_char_operation_mapping_json,example_logic,question_logic,example_has_prefix,example_has_suffix,question_has_prefix,question_has_suffix,example_has_negative,question_is_negative,example_offset_summary_exact_op,example_offset_summary_family,question_offset,question_best_family,question_best_exact_op,New Operations,row_has_outlier_example,row_outlier_example_count,row_has_complex_example,row_complex_example_count,diff_example_prefix_when_positive,diff_example_suffix_when_positive,diff_example_prefix_only_negative,question_output_style,question_raw_answer,question_clean_answer
+053f4545,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+79-12 = 67
+27-05 = 22
+65-21 = 44
+65?19 = 5905
+Now, determine the result for: 06@77",731,numeric_math_guess,4,-;-;-;?,"-: Sub (reverse, 0) ; ?: Mul (reverse, -1)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""direct"", 0], 3], [[""sub"", ""reverse"", 0], 3], [[""absdiff"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""direct"", 0], 3]]}, ""?"": {""symbol"": ""?"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 1], [[""mul-1"", ""reverse"", 0], 1]]}}","@: Add (reverse, 0)","{""symbol"": ""@"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: -1; sub: 0,diff: 0; mul: -1,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,731,731
+065f9dea,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+19}15 = 1464
+74!78 = 7874
+64!23 = 2364
+Now, determine the result for: 43*96",*53,numeric_math_guess,3,};!;!,"!: Concat (reverse, 0) ; }: Mul (reverse, 0)","{""!"": {""symbol"": ""!"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 2], [[""rconcat"", ""direct"", 0], 2]]}, ""}"": {""symbol"": ""}"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}}","*: AbsDiff (pure, 0)","{""symbol"": ""*"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,prefix,*53,53
+078df00e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+06+67 = 731
+45+99 = 451
+51-05 = -53
+Now, determine the result for: 56*02",1031,numeric_math_guess,3,+;+;-,"+: Add (reverse, 1) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", 0], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","*: Mul (reverse, 1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: 1; sub: 0,add: 1; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,1031,1031
+07aef27f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+73*57 = 6772
+29*49 = 9468
+56+16 = 1656
+Now, determine the result for: 22-84",-62,numeric_math_guess,3,*;*;+,"*: Mul (reverse, 1) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,concat: 0; mul: 1,concat: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,negative,-62,-62
+0c0683c3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+21-75 = 54
+39-42 = 3
+56-50 = 6
+70-11 = 59
+14-90 = 76
+Now, determine the result for: 79""59",138,numeric_math_guess,5,-;-;-;-;-,"-: AbsDiff (pure, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 21, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 5], [[""rabs"", ""direct"", 0], 5], [[""rsub"", ""direct"", 0], 3], [[""digit_absdiff"", ""direct"", 0], 2], [[""maxmodmin"", ""direct"", 0], 2]]}}",""": Add (pure, 0)","{""symbol"": ""\"""", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,add,Add,Add,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,138,138
+0f8452df,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+42$62 = $20
+57@27 = 1539
+66@48 = 3168
+Now, determine the result for: 90:68",159,numeric_math_guess,3,$;@;@,"$: Sub (pure, 0) ; @: Mul (pure, 0)","{""$"": {""symbol"": ""$"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 1], [[""rsub"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""rmod"", ""direct"", 0], 1], [[""maxmodmin"", ""direct"", 0], 1]]}, ""@"": {""symbol"": ""@"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}}",":: Add (pure, 1)","{""symbol"": "":"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""add""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0,diff: 0; mul: 0,1,add,Add,Add+1,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,159,159
+228bd26b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+43!79 = 3397
+58-47 = 11
+84!32 = 2688
+25-93 = 18
+Now, determine the result for: 40/12",4012,numeric_math_guess,4,!;-;!;-,"!: Mul (pure, 0) ; -: Mod (pure, 0)","{""!"": {""symbol"": ""!"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 24, ""best_candidates"": [[[""maxmodmin"", ""direct"", 0], 2], [[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1]]}}","/: Concat (pure, 0)","{""symbol"": ""/"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0; rmod: 0; sub: 0,diff: 0; mul: 0; rare: 0,0,concat,Concat,Concat,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,4012,4012
+1b019515,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+76<97 = 7373
+93!27 = !66
+25!54 = !29
+Now, determine the result for: 57&77",134,numeric_math_guess,3,<;!;!,"!: Sub (pure, 0) ; <: Mul (pure, 1)","{""!"": {""symbol"": ""!"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 9, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""sub"", ""direct"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}, ""<"": {""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 1], [[""mul+1"", ""direct"", 0], 1]]}}","&: Add (pure, 0)","{""symbol"": ""&"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 1; sub: 0,diff: 0; mul: 1,0,add,Add,Add,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,134,134
+1b3beb8f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+80[32 = 16
+49[33 = 16
+82[20 = 2
+76*52 = 3952
+61*24 = 1464
+Now, determine the result for: 87|22",108,numeric_math_guess,5,[;[;[;*;*,"*: Mul (pure, 0) ; [: Mod (pure, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}, ""["": {""symbol"": ""["", ""operation"": ""Mod"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 22, ""best_candidates"": [[[""mod"", ""direct"", 0], 3], [[""maxmodmin"", ""direct"", 0], 3], [[""cross_mul_rev"", ""direct"", 0], 1], [[""det"", ""direct"", 0], 1], [[""absdet"", ""direct"", 0], 1]]}}","|: Add (pure, -1)","{""symbol"": ""|"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mod: 0; mul: 0; sub: 0,diff: 0; mul: 0; rare: 0,-1,add,Add,Add-1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,108,108
+1c4861e6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+03-59 = 56
+63-87 = 24
+72+49 = 021
+66-15 = 51
+Now, determine the result for: 12*91",993,numeric_math_guess,4,-;-;+;-,"+: Add (reverse, -1) ; -: AbsDiff (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", -1], 1], [[""add-1"", ""reverse"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 21, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""direct"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""digit_absdiff"", ""direct"", 0], 3]]}}","*: Mul (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: -1; sub: 0,add: -1; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,993,993
+1da822f1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+58*31 = 88
+79*93 = 171
+19*99 = 117
+77*88 = 164
+Now, determine the result for: 26%23",598,numeric_math_guess,4,*;*;*;*,"*: Add (pure, -1)","{""*"": {""symbol"": ""*"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""support"": 4, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", -1], 4], [[""add-1"", ""direct"", 0], 4], [[""digit_add_mod10"", ""direct"", -1], 1]]}}","%: Mul (pure, 0)","{""symbol"": ""%"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: -1,add: -1,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,598,598
+1eaf6228,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+25-55 = 3
+94+41 = 26
+25+29 = 341
+35-35 = 0
+Now, determine the result for: 42*61",483,numeric_math_guess,4,-;+;+;-,"+: Add (reverse, -1) ; -: AbsDiff (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", -1], 2], [[""add-1"", ""reverse"", 0], 2], [[""cross_mul_rev"", ""direct"", 1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 35, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2]]}}","*: Mul (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: -1; sub: 0,add: -1; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,483,483
+209d28ca,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+35}22 = 13
+10^96 = 961
+66}15 = 51
+23^91 = 2094
+Now, determine the result for: 84[87",171,numeric_math_guess,4,};^;};^,"^: Mul (pure, 1) ; }: Sub (pure, 0)","{""^"": {""symbol"": ""^"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 1], 2], [[""mul+1"", ""direct"", 0], 2], [[""concat"", ""reverse"", 0], 1]]}, ""}"": {""symbol"": ""}"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 19, ""best_candidates"": [[[""sub"", ""direct"", 0], 2], [[""sub"", ""reverse"", 0], 2], [[""absdiff"", ""direct"", 0], 2], [[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""direct"", 0], 2]]}}","[: Add (pure, 0)","{""symbol"": ""["", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 1; sub: 0,diff: 0; mul: 1,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,171,171
+20f0fac9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+78]18 = 6
+95]24 = 23
+52*94 = 145
+21]91 = 7
+Now, determine the result for: 31%96",2976,numeric_math_guess,4,];];*;],"*: Add (pure, -1) ; ]: Mod (pure, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""direct"", -1], 1], [[""add-1"", ""direct"", 0], 1]]}, ""]"": {""symbol"": ""]"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 20, ""best_candidates"": [[[""maxmodmin"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""mod"", ""direct"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2]]}}","%: Mul (pure, 0)","{""symbol"": ""%"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: -1; mod: 0; sub: 0,add: -1; diff: 0; rare: 0,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,2976,2976
+21dff465,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+30?45 = 75
+57?67 = 124
+40?37 = 77
+Now, determine the result for: 73@82",@9,numeric_math_guess,3,?;?;?,"?: Add (pure, 0)","{""?"": {""symbol"": ""?"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 3], [[""add-1"", ""direct"", 1], 3], [[""add+1"", ""direct"", -1], 3], [[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2]]}}","@: Sub (reverse, 0)","{""symbol"": ""@"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,add: 0,add: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,prefix,@9,9
+124db55f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+93!69 = 24
+10!94 = 4
+48!60 = 12
+47!24 = 23
+75!17 = 7
+Now, determine the result for: 44{47",4447,numeric_math_guess,5,!;!;!;!;!,"!: Sub (pure, 0)","{""!"": {""symbol"": ""!"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 29, ""best_candidates"": [[[""maxmodmin"", ""direct"", 0], 5], [[""absdiff"", ""direct"", 0], 3], [[""rabs"", ""direct"", 0], 3], [[""mod"", ""direct"", 0], 3], [[""sub"", ""direct"", 0], 2]]}}","{: Concat (pure, 0)","{""symbol"": ""{"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mod: 0; rmod: 0; sub: 0,diff: 0; rare: 0,0,concat,Concat,Concat,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,4447,4447
+32e9a308,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+86-22 = 1893
+39-29 = 1132
+54-54 = 2917
+25-67 = 1676
+Now, determine the result for: 94`31",124,numeric_math_guess,4,-;-;-;-,"-: Mul (pure, 1)","{""-"": {""symbol"": ""-"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 4, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 4], [[""mul+1"", ""direct"", 0], 4]]}}","`: Add (pure, -1)","{""symbol"": ""`"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 1,mul: 1,-1,add,Add,Add-1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,124,124
+260f20c1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+84[69 = 153
+13+97 = 1260
+46+47 = 2161
+52[80 = 132
+Now, determine the result for: 22\65",43,numeric_math_guess,4,[;+;+;[,"+: Mul (pure, -1) ; [: Add (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 2], [[""mul-1"", ""direct"", 0], 2]]}, ""["": {""symbol"": ""["", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2]]}}","\: AbsDiff (pure, 0)","{""symbol"": ""\\"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,43,43
+272bde97,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+31-55 = -24
+21-97 = -76
+47*44 = 4447
+Now, determine the result for: 14+31",55,numeric_math_guess,3,-;-;*,"*: Concat (reverse, 0) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 6, ""best_candidates"": [[[""sub"", ""direct"", 0], 2], [[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""direct"", 1], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""direct"", -1], 2]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,1,add,Add,Add+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,55,55
+275db7d4,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+35""65 = 100
+68""97 = 165
+19@78 = @59
+88@42 = @46
+72""58 = 130
+Now, determine the result for: 62:21",6221,numeric_math_guess,5,""";"";@;@;""",""": Add (pure, 0) ; @: AbsDiff (pure, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 3], [[""add-1"", ""direct"", 1], 3], [[""add+1"", ""direct"", -1], 3]]}, ""@"": {""symbol"": ""@"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 15, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""rsub"", ""direct"", 0], 1], [[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1]]}}",":: Concat (pure, 0)","{""symbol"": "":"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,5,TRUE,FALSE,FALSE,plain,6221,6221
+27661a37,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+12*54 = 549
+76-28 = 51
+07-79 = 72
+28*19 = 2647
+Now, determine the result for: 96+77",741,numeric_math_guess,4,*;-;-;*,"*: Mul (reverse, 0) ; -: AbsDiff (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 11, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0,diff: 0; mul: 0,1,add,Add,Add+1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,741,741
+9fa9ecdc,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+97%32 = 3103
+25/84 = 109
+31%85 = 2634
+59/46 = 105
+45/67 = 112
+Now, determine the result for: 50^86",36,numeric_math_guess,5,%;/;%;/;/,"%: Mul (pure, -1) ; /: Add (pure, 0)","{""%"": {""symbol"": ""%"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 2], [[""mul-1"", ""direct"", 0], 2]]}, ""/"": {""symbol"": ""/"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 3], [[""add-1"", ""direct"", 1], 3], [[""add+1"", ""direct"", -1], 3]]}}","^: AbsDiff (pure, 0)","{""symbol"": ""^"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,36,36
+2f7e0e78,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+66+09 = 551
+74+42 = 07
+49+19 = 481
+Now, determine the result for: 98-99",01,numeric_math_guess,3,+;+;+,"+: Add (reverse, -1)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", -1], 3], [[""add-1"", ""reverse"", 0], 3], [[""digit_mul"", ""direct"", 0], 1]]}}","-: AbsDiff (reverse, 0)","{""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: -1,add: -1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,01,01
+32a31236,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+63|08 = 6308
+14|62 = 1462
+61/34 = 886
+26|16 = 2616
+Now, determine the result for: 52[96",44,numeric_math_guess,4,|;|;/;|,"/: Mul (reverse, 0) ; |: Concat (pure, 0)","{""/"": {""symbol"": ""/"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""|"": {""symbol"": ""|"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 3], [[""rconcat"", ""reverse"", 0], 3]]}}","[: AbsDiff (pure, 0)","{""symbol"": ""["", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",both,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,44,44
+5d055504,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+51>09 = 0531
+94>17 = 9743
+41>57 = 0501
+Now, determine the result for: 76!23",99,numeric_math_guess,3,>;>;>,">: Mul (reverse, 0)","{"">"": {""symbol"": "">"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}}","!: Add (pure, 0)","{""symbol"": ""!"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0,mul: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,99,99
+356e927c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+18-43 = 4572
+46-34 = 2572
+49`55 = 93
+Now, determine the result for: 24#28",421,numeric_math_guess,3,-;-;`,"-: Mul (reverse, 0) ; `: Sub (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""`"": {""symbol"": ""`"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 9, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","#: Add (reverse, 0)","{""symbol"": ""#"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,421,421
+35e12b34,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+79+65 = 14
+94+43 = 51
+45+11 = 34
+Now, determine the result for: 65`48",041,numeric_math_guess,3,+;+;+,"+: Sub (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""direct"", 0], 3], [[""sub"", ""reverse"", 0], 3], [[""absdiff"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""direct"", 0], 3]]}}","`: Add (reverse, 0)","{""symbol"": ""`"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,sub: 0,diff: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,041,041
+3687bc41,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+81}95 = 14
+89|63 = 8963
+56|56 = 5656
+97|35 = 9735
+Now, determine the result for: 08`14",121,numeric_math_guess,4,};|;|;|,"|: Concat (pure, 0) ; }: AbsDiff (pure, 0)","{""|"": {""symbol"": ""|"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 4, ""best_candidates"": [[[""concat"", ""direct"", 0], 3], [[""rconcat"", ""reverse"", 0], 3], [[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}, ""}"": {""symbol"": ""}"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 10, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""direct"", 0], 1], [[""rsub"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","`: Add (reverse, 0)","{""symbol"": ""`"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; concat: 0,concat: 0; diff: 0,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,121,121
+e7b87b82,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+61>72 = 133
+48>99 = 147
+71>20 = 91
+93<37 = 3440
+80>82 = 162
+Now, determine the result for: 29*39",10,numeric_math_guess,5,>;>;>;<;>,"<: Mul (pure, -1) ; >: Add (pure, 0)","{""<"": {""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 1], [[""mul-1"", ""direct"", 0], 1]]}, "">"": {""symbol"": "">"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 4, ""candidate_count"": 9, ""best_candidates"": [[[""add"", ""direct"", 0], 4], [[""add-1"", ""direct"", 1], 4], [[""add+1"", ""direct"", -1], 4], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1]]}}","*: AbsDiff (pure, 0)","{""symbol"": ""*"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,10,10
+386b6d03,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+47[35 = 2293
+82-68 = -85
+09[97 = 0117
+Now, determine the result for: 79'97",671,numeric_math_guess,3,[;-;[,"-: Sub (reverse, 0) ; [: Mul (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}, ""["": {""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}}","': Add (reverse, 0)","{""symbol"": ""'"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,671,671
+3bf05c35,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+28-36 = 91
+51-97 = 46
+02-01 = 01
+Now, determine the result for: 86+87",641,numeric_math_guess,3,-;-;-,"-: Sub (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 19, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,641,641
+44a57762,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+57|64 = 121
+49|62 = 021
+77|21 = 98
+Now, determine the result for: 56[71",5011,numeric_math_guess,3,|;|;|,"|: Add (pure, 0)","{""|"": {""symbol"": ""|"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2]]}}","[: Mul (reverse, 0)","{""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0,add: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,5011,5011
+4684abe0,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+06*88 = 1825
+26*35 = 7823
+61+53 = 5361
+Now, determine the result for: 74-86",-12,numeric_math_guess,3,*;*;+,"*: Mul (reverse, 1) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,concat: 0; mul: 1,concat: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,negative,-12,-12
+48c25e0e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82-18 = 1476
+93^50 = ^43
+26-61 = 1586
+Now, determine the result for: 43&11",53,numeric_math_guess,3,-;^;-,"-: Mul (pure, 0) ; ^: Sub (pure, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}, ""^"": {""symbol"": ""^"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","&: Add (pure, -1)","{""symbol"": ""&"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""family"": ""add""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,-1,add,Add,Add-1,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,53,53
+4e840a1a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+58*93 = 152
+26*21 = 48
+56*65 = 122
+Now, determine the result for: 15+53",38,numeric_math_guess,3,*;*;*,"*: Add (pure, 1)","{""*"": {""symbol"": ""*"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 1], 3], [[""add+1"", ""direct"", 0], 3], [[""digit_add_mod10"", ""direct"", 1], 1]]}}","+: AbsDiff (pure, 0)","{""symbol"": ""+"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 1,add: 1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,38,38
+4f06e1c0,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+79*29 = 2979
+12*65 = 6512
+47*03 = 0347
+Now, determine the result for: 07+38",351,numeric_math_guess,3,*;*;*,"*: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 3], [[""rconcat"", ""direct"", 0], 2]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0,concat: 0,0,add,Add,Add,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,plain,351,351
+5039d1a0,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+64*44 = 3202
+21*84 = 575
+64*69 = 5144
+28-18 = 1
+Now, determine the result for: 06+08",041,numeric_math_guess,4,*;*;*;-,"*: Mul (reverse, -1) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 3], [[""mul-1"", ""reverse"", 0], 3]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 15, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: -1; sub: 0,diff: 0; mul: -1,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,041,041
+f9bd3119,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+91*42 = 34
+93|17 = 9672
+11|02 = 022
+86*59 = 361
+01*96 = 97
+Now, determine the result for: 53)73",)2,numeric_math_guess,5,*;|;|;*;*,"*: Add (reverse, 0) ; |: Mul (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 12, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""digit_add_mod10"", ""direct"", 1], 1], [[""add"", ""direct"", 0], 1]]}, ""|"": {""symbol"": ""|"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}}","): AbsDiff (reverse, 0)","{""symbol"": "")"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,add: 0; mul: 0,add: 0; mul: 0,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,prefix,)2,2
+cc735e46,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+65(87 = (22
+71(58 = (13
+51`93 = 144
+Now, determine the result for: 44:82",4482,numeric_math_guess,3,(;(;`,"(: AbsDiff (pure, 0) ; `: Add (pure, 0)","{""("": {""symbol"": ""("", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 17, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""maxmodmin"", ""direct"", 0], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""direct"", 0], 1]]}, ""`"": {""symbol"": ""`"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}}",":: Concat (pure, 0)","{""symbol"": "":"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,4482,4482
+5541d35c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+33-12 = -21
+37+87 = 151
+32-34 = -02
+Now, determine the result for: 97*93",2803,numeric_math_guess,3,-;+;-,"+: Add (reverse, 0) ; -: neg_sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 5, ""best_candidates"": [[[""rsub"", ""direct"", 0], 1], [[""rsub"", ""reverse"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","*: Mul (reverse, 1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: 0; rsub: 0; sub: 0,add: 0; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,2803,2803
+592107c3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+70<36 = 2520
+21+95 = 2195
+69<15 = 1035
+Now, determine the result for: 75/62",/13,numeric_math_guess,3,<;+;<,"+: Concat (pure, 0) ; <: Mul (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}, ""<"": {""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}}","/: Sub (pure, 0)","{""symbol"": ""/"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,prefix,/13,13
+5a0d5d2a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+27-65 = 61
+47*42 = 7771
+81-09 = -27
+Now, determine the result for: 39+94",341,numeric_math_guess,3,-;*;-,"*: Mul (reverse, 1) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 9, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 1; sub: 0,diff: 0; mul: 1,1,add,Add,Add+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,341,341
+5a9fcf68,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+36?55 = 8?
+97?14 = 83?
+23?74 = 51?
+Now, determine the result for: 24@28",4443,numeric_math_guess,3,?;?;?,"?: Sub (reverse, 0)","{""?"": {""symbol"": ""?"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 21, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""maxmodmin"", ""reverse"", 0], 3], [[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2]]}}","@: Mul (reverse, 0)","{""symbol"": ""@"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,TRUE,FALSE,plain,4443,4443
+945c151e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+42*54 = 9701
+18*78 = 6407
+79*01 = 969
+02*33 = 956
+Now, determine the result for: 38+08",461,numeric_math_guess,4,*;*;*;*,"*: Mul (reverse, -1)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 4, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 4], [[""mul-1"", ""reverse"", 0], 4]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: -1,mul: -1,1,add,Add,Add+1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,461,461
+e7dfe7d3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+25)26 = 650
+58)11 = 638
+19%96 = 116
+Now, determine the result for: 21+84",0,numeric_math_guess,3,););%,"%: Add (pure, 1) ; ): Mul (pure, 0)","{""%"": {""symbol"": ""%"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""direct"", 1], 1], [[""add+1"", ""direct"", 0], 1]]}, "")"": {""symbol"": "")"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}}","+: Div (pure, 0)","{""symbol"": ""+"", ""operation"": ""Div"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""rare""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 1; mul: 0,add: 1; mul: 0,0,rare,Div,Div,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,0,0
+38489191,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+46%21 = 67
+44%79 = 123
+96(33 = 3169
+75(40 = 3001
+Now, determine the result for: 70/51",/19,numeric_math_guess,4,%;%;(;(,"%: Add (pure, 0) ; (: Mul (pure, 1)","{""%"": {""symbol"": ""%"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1]]}, ""("": {""symbol"": ""("", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 2], [[""mul+1"", ""direct"", 0], 2]]}}","/: Sub (pure, 0)","{""symbol"": ""/"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,add: 0; mul: 1,add: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,prefix,/19,19
+23f98595,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+17-59 = 5476
+62-45 = 4041
+58-38 = 5507
+Now, determine the result for: 33'69",03,numeric_math_guess,3,-;-;-,"-: Mul (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}}","': Mod (reverse, 0)","{""symbol"": ""'"", ""operation"": ""Mod"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""rare""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0,mul: 0,0,rare,Mod,Mod,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,03,03
+603ad93b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+38+05 = 231
+17-64 = 52
+97+37 = 151
+65-29 = -63
+83+43 = 17
+Now, determine the result for: 32*05",9411,numeric_math_guess,5,+;-;+;-;+,"+: Add (reverse, -1) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", -1], 3], [[""add-1"", ""reverse"", 0], 3], [[""digit_sum_sum"", ""direct"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 9, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1]]}}","*: Mul (reverse, -1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: -1; sub: 0,add: -1; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,9411,9411
+6385674a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+24-87 = -63
+98-25 = -73
+61*43 = 345
+27*33 = 5732
+94*24 = 7502
+Now, determine the result for: 41+28",69,numeric_math_guess,5,-;-;*;*;*,"*: Mul (reverse, -1) ; -: neg_Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 3], [[""mul-1"", ""reverse"", 0], 3]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}}","+: Add (pure, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: -1; rsub: 0; sub: 0,diff: 0; mul: -1,0,add,Add,Add,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,69,69
+648e2da2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+84-33 = 51
+67*35 = 8204
+02*81 = 063
+Now, determine the result for: 34+88",031,numeric_math_guess,3,-;*;*,"*: Mul (reverse, 0) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 16, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","+: Add (reverse, -1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,-1,add,Add,Add-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,031,031
+656cfb5f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+83*09 = 1243
+26-52 = -73
+73-39 = -65
+Now, determine the result for: 72+44",17,numeric_math_guess,3,*;-;-,"*: Mul (reverse, 1) ; -: rsub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 4, ""best_candidates"": [[[""rsub"", ""reverse"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 1; rsub: 0; sub: 0,diff: 0; mul: 1,0,add,Add,Add,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,plain,17,17
+528ec0d8,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+38(96 = 3648
+13(43 = 559
+42#38 = 81
+41(94 = 3854
+Now, determine the result for: 11-50",-39,numeric_math_guess,4,(;(;#;(,"#: Add (pure, 1) ; (: Mul (pure, 0)","{""#"": {""symbol"": ""#"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 1], 1], [[""add+1"", ""direct"", 0], 1], [[""digit_sum_sum"", ""reverse"", 1], 1]]}, ""("": {""symbol"": ""("", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 3], [[""mul-1"", ""direct"", 1], 3], [[""mul+1"", ""direct"", -1], 3]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: 1; mul: 0,add: 1; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,negative,-39,-39
+66a0856f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+70-75 = 7075
+60-87 = 6087
+53-49 = 5349
+Now, determine the result for: 74[36",38,numeric_math_guess,3,-;-;-,"-: Concat (pure, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 3], [[""rconcat"", ""reverse"", 0], 3]]}}","[: Sub (pure, 0)","{""symbol"": ""["", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0,concat: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,38,38
+5f6b6ea3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+34+19 = 3193
+55+45 = 0792
+63+52 = 009
+Now, determine the result for: 51(63",6,numeric_math_guess,3,+;+;+,"+: Mul (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}}","(: Mod (reverse, 0)","{""symbol"": ""("", ""operation"": ""Mod"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""rare""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0,mul: 0,0,rare,Mod,Mod,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,6,6
+688c807b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+76&34 = &42
+49<39 = 88
+50&40 = &10
+64&35 = &29
+Now, determine the result for: 28\64",1793,numeric_math_guess,4,&;<;&;&,"&: Sub (pure, 0) ; <: Add (pure, 0)","{""&"": {""symbol"": ""&"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 20, ""best_candidates"": [[[""sub"", ""direct"", 0], 3], [[""absdiff"", ""direct"", 0], 3], [[""rabs"", ""direct"", 0], 3], [[""sub-1"", ""direct"", 1], 3], [[""sub+1"", ""direct"", -1], 3]]}, ""<"": {""symbol"": ""<"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 4, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add+1"", ""direct"", -1], 1], [[""digit_add_mod10"", ""reverse"", 1], 1]]}}","\: Mul (pure, 1)","{""symbol"": ""\\"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""mul""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,1793,1793
+68903918,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+54/69 = 15
+92/78 = 14
+23+20 = 43
+Now, determine the result for: 59-69",4072,numeric_math_guess,3,/;/;+,"+: Add (pure, 0) ; /: AbsDiff (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}, ""/"": {""symbol"": ""/"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 15, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""maxmodmin"", ""direct"", 0], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""direct"", 0], 1]]}}","-: Mul (pure, 1)","{""symbol"": ""-"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,4072,4072
+5d89a09c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+49*28 = 7077
+32*02 = 954
+46+78 = 151
+48*91 = 5951
+28*01 = 918
+Now, determine the result for: 78-78",0,numeric_math_guess,5,*;*;+;*;*,"*: Mul (reverse, -1) ; +: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 4, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 4], [[""mul-1"", ""reverse"", 0], 4]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", -1], 1]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,0,0
+6ac4d8c2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+08-29 = -21
+78*63 = 3313
+86*23 = 7712
+Now, determine the result for: 17+76",831,numeric_math_guess,3,-;*;*,"*: Mul (reverse, 1) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 1; sub: 0,diff: 0; mul: 1,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,831,831
+6be00ae9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+35*26 = 6823
+46*41 = 698
+61-26 = -64
+52*43 = 058
+07-66 = -4
+Now, determine the result for: 29+11",401,numeric_math_guess,5,*;*;-;*;-,"*: Mul (reverse, 0) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1], [[""rsub"", ""reverse"", 0], 1], [[""digit_sum_diff"", ""direct"", 1], 1]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 0; rsub: 0; sub: 0,diff: 0; mul: 0,1,add,Add,Add+1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,401,401
+5f5227b5,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+53^32 = 608
+02%69 = 611
+64%86 = 411
+81%56 = 38
+Now, determine the result for: 06@52",53@,numeric_math_guess,4,^;%;%;%,"%: Add (reverse, 0) ; ^: Mul (reverse, 1)","{""%"": {""symbol"": ""%"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 5, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""digit_add_mod10"", ""direct"", 1], 1], [[""digit_prod_sum"", ""direct"", 0], 1]]}, ""^"": {""symbol"": ""^"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", 0], 1]]}}","@: Sub (reverse, 0)","{""symbol"": ""@"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,add: 0; mul: 1,add: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,suffix,53@,53
+6c402bb7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+38>92 = 7042
+13>39 = 3882
+12`84 = 72
+43`65 = 22
+Now, determine the result for: 81-52",44,numeric_math_guess,4,>;>;`;`,">: Mul (reverse, 0) ; `: AbsDiff (reverse, 0)","{"">"": {""symbol"": "">"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""`"": {""symbol"": ""`"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 12, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""direct"", 0], 2], [[""rsub"", ""reverse"", 0], 2], [[""rabs"", ""direct"", 0], 2]]}}","-: Add (reverse, 1)","{""symbol"": ""-"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0,diff: 0; mul: 0,1,add,Add,Add+1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,44,44
+672029b2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+27*77 = 4455
+18*84 = 8883
+78*99 = 3168
+Now, determine the result for: 98-83",31,numeric_math_guess,3,*;*;*,"*: Mul (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}}","-: Mod (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Mod"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""rare""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0,mul: 0,0,rare,Mod,Mod,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,31,31
+6f88e240,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+06-41 = 47
+45)45 = 0
+41)12 = 7
+Now, determine the result for: 43<61",445,numeric_math_guess,3,-;);),"): Sub (pure, 0) ; -: Add (pure, 0)","{"")"": {""symbol"": "")"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 40, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}}","<: Mul (reverse, 0)","{""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,445,445
+707fd23a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+37}95 = 132
+54#81 = 27
+37}24 = 61
+56}65 = 121
+Now, determine the result for: 77+42",3235,numeric_math_guess,4,};#;};},"#: AbsDiff (pure, 0) ; }: Add (pure, 0)","{""#"": {""symbol"": ""#"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 1], [[""rsub"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""rmod"", ""direct"", 0], 1], [[""maxmodmin"", ""direct"", 0], 1]]}, ""}"": {""symbol"": ""}"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 3], [[""add-1"", ""direct"", 1], 3], [[""add+1"", ""direct"", -1], 3], [[""digit_add_mod10"", ""reverse"", 1], 1], [[""digit_sum_sum"", ""reverse"", 0], 1]]}}","+: Mul (pure, 1)","{""symbol"": ""+"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0,add: 0; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,3235,3235
+7475f2bf,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+93\28 = 65
+33(95 = 3135
+88(48 = 4224
+36\12 = 24
+63\74 = 11
+Now, determine the result for: 26+86",111,numeric_math_guess,5,\;(;(;\;\,"(: Mul (pure, 0) ; \: Sub (pure, 0)","{""("": {""symbol"": ""("", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 2], [[""mul-1"", ""direct"", 1], 2], [[""mul+1"", ""direct"", -1], 2]]}, ""\\"": {""symbol"": ""\\"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 24, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 3], [[""rabs"", ""direct"", 0], 3], [[""sub"", ""direct"", 0], 2], [[""sub-1"", ""direct"", 1], 2], [[""sub+1"", ""direct"", -1], 2]]}}","+: Add (pure, -1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0; sub: 0,diff: 0; mul: 0,-1,add,Add,Add-1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,111,111
+c561264c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+54-34 = 2
+42-01 = 41
+86-52 = 34
+93-35 = -41
+46*72 = 7246
+Now, determine the result for: 79+02",0279,numeric_math_guess,5,-;-;-;-;*,"*: Concat (reverse, 0) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 27, ""best_candidates"": [[[""sub"", ""reverse"", 0], 4], [[""sub-1"", ""reverse"", 1], 4], [[""sub+1"", ""reverse"", -1], 4], [[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3]]}}","+: Concat (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,0279,0279
+7c0c5227,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+58*47 = 0926
+63+23 = 2363
+68*18 = 6696
+Now, determine the result for: 69-55",14,numeric_math_guess,3,*;+;*,"*: Mul (reverse, 0) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,14,14
+7d8fe3a8,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+22""20 = 43
+84""52 = 137
+69|71 = |2
+Now, determine the result for: 91%84",7644,numeric_math_guess,3,""";"";|",""": Add (pure, 1) ; |: AbsDiff (pure, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 1], 2], [[""add+1"", ""direct"", 0], 2], [[""digit_add_mod10"", ""direct"", 1], 1]]}, ""|"": {""symbol"": ""|"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 1], [[""rsub"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""rdiv"", ""direct"", 1], 1], [[""rmod"", ""direct"", 0], 1]]}}","%: Mul (pure, 0)","{""symbol"": ""%"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 1,add: 1; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,7644,7644
+7d9f6c40,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+71-81 = -1
+97-58 = -6
+06-03 = 03
+51-72 = -21
+Now, determine the result for: 98+47",461,numeric_math_guess,4,-;-;-;-,"-: Sub (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""reverse"", 0], 4], [[""sub-1"", ""reverse"", 1], 4], [[""sub+1"", ""reverse"", -1], 4], [[""div"", ""direct"", -1], 1], [[""div"", ""reverse"", -1], 1]]}}","+: Add (reverse, 1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,sub: 0,diff: 0,1,add,Add,Add+1,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,461,461
+8154fbdc,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+93<77 = 9377
+82-79 = -96
+03<31 = 0331
+Now, determine the result for: 66`82",8481,numeric_math_guess,3,<;-;<,"-: Sub (reverse, 0) ; <: Concat (pure, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}, ""<"": {""symbol"": ""<"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""rconcat"", ""reverse"", 0], 2], [[""concat"", ""direct"", 0], 1]]}}","`: Mul (reverse, 0)","{""symbol"": ""`"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",both,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; rconcat: 0; sub: 0,concat: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,plain,8481,8481
+662fd21c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+51!65 = 116
+43[47 = 2022
+20[79 = 1581
+Now, determine the result for: 70]53",17,numeric_math_guess,3,!;[;[,"!: Add (pure, 0) ; [: Mul (pure, 1)","{""!"": {""symbol"": ""!"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}, ""["": {""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 2], [[""mul+1"", ""direct"", 0], 2]]}}","]: Sub (pure, 0)","{""symbol"": ""]"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: 1,add: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,17,17
+861cb154,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+69(06 = 63(
+77`94 = 621
+76(36 = 4(
+Now, determine the result for: 14!24",2271,numeric_math_guess,3,(;`;(,"(: Sub (reverse, 0) ; `: Add (reverse, 0)","{""("": {""symbol"": ""("", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 23, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2]]}, ""`"": {""symbol"": ""`"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", -1], 1]]}}","!: Mul (reverse, 0)","{""symbol"": ""!"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,TRUE,FALSE,plain,2271,2271
+6bef7413,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+42*06 = 0441
+87+04 = 711
+46*25 = 8233
+71+58 = 101
+Now, determine the result for: 01-29",-28,numeric_math_guess,4,*;+;*;+,"*: Mul (reverse, 0) ; +: Add (reverse, -1)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", -1], 2], [[""add-1"", ""reverse"", 0], 2]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: -1; mul: 0,add: -1; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,negative,-28,-28
+8ae8e12a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+81*71 = 603
+35+55 = 5535
+49+21 = 2149
+Now, determine the result for: 08-17",9,numeric_math_guess,3,*;+;+,"*: Mul (reverse, 0) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 2], [[""rconcat"", ""direct"", 0], 2]]}}","-: Sub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,9,9
+8df3daad,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+73@78 = 7378
+60+19 = 6019
+69+97 = 6997
+Now, determine the result for: 45|11",34,numeric_math_guess,3,@;+;+,"+: Concat (pure, 0) ; @: Concat (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 2], [[""rconcat"", ""reverse"", 0], 2]]}, ""@"": {""symbol"": ""@"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}}","|: Sub (pure, 0)","{""symbol"": ""|"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0,concat: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,34,34
+8e3e4928,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82\83 = 4601
+08""95 = 9508
+44""28 = 2844
+09\84 = 0234
+Now, determine the result for: 57$07",5,numeric_math_guess,4,"\;"";"";\",""": Concat (reverse, 0) ; \: Mul (reverse, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 2], [[""rconcat"", ""direct"", 0], 2]]}, ""\\"": {""symbol"": ""\\"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}}","$: Sub (reverse, 0)","{""symbol"": ""$"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,5,5
+92e320c9,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+23%11 = 12
+77%50 = 27
+48""99 = 148
+Now, determine the result for: 45/78",3511,numeric_math_guess,3,"%;%;""",""": Add (pure, 1) ; %: Sub (pure, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""direct"", 1], 1], [[""add+1"", ""direct"", 0], 1]]}, ""%"": {""symbol"": ""%"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 19, ""best_candidates"": [[[""sub"", ""direct"", 0], 2], [[""sub"", ""reverse"", 0], 2], [[""absdiff"", ""direct"", 0], 2], [[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""direct"", 0], 2]]}}","/: Mul (pure, 1)","{""symbol"": ""/"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 1; sub: 0,add: 1; diff: 0,1,mul,Mul,Mul+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,3511,3511
+940df3f4,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+74#48 = 131
+79-22 = 57
+91#84 = 76
+Now, determine the result for: 27!82",5102,numeric_math_guess,3,#;-;#,"#: Add (reverse, 0) ; -: Sub (reverse, 0)","{""#"": {""symbol"": ""#"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 5, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""digit_add_mod10"", ""direct"", 1], 1], [[""cross_mul"", ""direct"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 14, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","!: Mul (reverse, -1)","{""symbol"": ""!"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,5102,5102
+6e6401d7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+95'87 = 8266
+14'63 = 883
+40'97 = 3881
+Now, determine the result for: 94\93",1,numeric_math_guess,3,';';',"': Mul (pure, 1)","{""'"": {""symbol"": ""'"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 3], [[""mul+1"", ""direct"", 0], 3]]}}","\: Sub (pure, 0)","{""symbol"": ""\\"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 1,mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,1,1
+966c1f9f,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+43*19 = 4903
+53-24 = -7
+51-49 = -97
+Now, determine the result for: 31+45",66,numeric_math_guess,3,*;-;-,"*: Mul (reverse, 0) ; -: Sub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2]]}}","+: Add (reverse, -1)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,-1,add,Add,Add-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,66,66
+9aa48392,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+28-08 = -2
+91*21 = 2191
+64-82 = -81
+15*39 = 3915
+39*36 = 3639
+Now, determine the result for: 58+66",151,numeric_math_guess,5,-;*;-;*;*,"*: Concat (reverse, 0) ; -: rsub (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 3], [[""rconcat"", ""direct"", 0], 3]]}, ""-"": {""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 1, ""best_candidates"": [[[""rsub"", ""reverse"", 0], 2]]}}","+: Add (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; rsub: 0,concat: 0; diff: 0,0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,151,151
+83f2724b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+32:56 = 88
+92[66 = 4191
+82[23 = 698
+87[09 = 0207
+Now, determine the result for: 35>13",22,numeric_math_guess,4,:;[;[;[,":: Add (reverse, 0) ; [: Mul (reverse, 0)","{"":"": {""symbol"": "":"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}, ""["": {""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}}",">: Sub (pure, 0)","{""symbol"": "">"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: 0,add: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,22,22
+899e7ce8,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+38)66 = 9745
+83/37 = 111
+06/66 = 621
+92)35 = 8351
+52/35 = 87
+Now, determine the result for: 33@23",1@,numeric_math_guess,5,);/;/;);/,"): Mul (reverse, 1) ; /: Add (reverse, 0)","{"")"": {""symbol"": "")"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""/"": {""symbol"": ""/"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1]]}}","@: Sub (reverse, 0)","{""symbol"": ""@"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,add: 0; mul: 1,add: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,suffix,1@,1
+dde06528,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+54`14 = 755
+54%61 = %7
+61%37 = 24
+93`99 = 9206
+Now, determine the result for: 84?52",8452,numeric_math_guess,4,`;%;%;`,"%: AbsDiff (pure, 0) ; `: Mul (pure, -1)","{""%"": {""symbol"": ""%"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 11, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""maxmodmin"", ""direct"", 0], 2], [[""rsub"", ""direct"", 0], 1], [[""rmod"", ""direct"", 0], 1]]}, ""`"": {""symbol"": ""`"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 2], [[""mul-1"", ""direct"", 0], 2]]}}","?: Concat (pure, 0)","{""symbol"": ""?"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: -1; sub: 0,diff: 0; mul: -1,0,concat,Concat,Concat,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,8452,8452
+a361a1b7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+90@12 = 9012
+99@42 = 9942
+88<41 = 3609
+74<61 = 4515
+64<35 = 2241
+Now, determine the result for: 53:99",:46,numeric_math_guess,5,@;@;<;<;<,"<: Mul (pure, 1) ; @: Concat (pure, 0)","{""<"": {""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 3], [[""mul+1"", ""direct"", 0], 3]]}, ""@"": {""symbol"": ""@"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 2], [[""rconcat"", ""reverse"", 0], 2]]}}",":: AbsDiff (pure, 0)","{""symbol"": "":"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,concat: 0; mul: 1,concat: 0; mul: 1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,prefix,:46,46
+a87565bb,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+46$71 = 74$
+64^78 = 6478
+77^61 = 7761
+17^61 = 1761
+Now, determine the result for: 81)85",67,numeric_math_guess,4,$;^;^;^,"$: Sub (reverse, 0) ; ^: Concat (pure, 0)","{""$"": {""symbol"": ""$"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}, ""^"": {""symbol"": ""^"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 3], [[""rconcat"", ""reverse"", 0], 3]]}}","): Add (reverse, 0)","{""symbol"": "")"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",both,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,TRUE,FALSE,plain,67,67
+abbb5d43,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+51^81 = 132
+90/42 = 48
+63^32 = 95
+Now, determine the result for: 86{99",8513,numeric_math_guess,3,^;/;^,"/: Sub (pure, 0) ; ^: Add (pure, 0)","{""/"": {""symbol"": ""/"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}, ""^"": {""symbol"": ""^"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1]]}}","{: Mul (pure, -1)","{""symbol"": ""{"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,8513,8513
+aca5c614,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+25+25 = 2525
+77+53 = 5377
+57*31 = 579
+57*32 = 5271
+43+76 = 7643
+Now, determine the result for: 14-63",-5,numeric_math_guess,5,+;+;*;*;+,"*: Mul (reverse, 0) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 4, ""best_candidates"": [[[""concat"", ""reverse"", 0], 3], [[""rconcat"", ""direct"", 0], 3], [[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}}","-: rsub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,rsub,rsub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,negative,-5,-5
+9c91b226,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+38@26 = 541
+32""43 = 287
+93@81 = 75
+Now, determine the result for: 29?26",03,numeric_math_guess,3,"@;"";@",""": Mul (reverse, 0) ; @: Add (reverse, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""@"": {""symbol"": ""@"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 5, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""digit_add_mod10"", ""direct"", 1], 1], [[""cross_mul"", ""direct"", 0], 1]]}}","?: Sub (reverse, 0)","{""symbol"": ""?"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: 0,add: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,03,03
+b075e716,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+53[16 = 68
+51[77 = 127
+70-54 = 16
+52[61 = 112
+Now, determine the result for: 30+80",2400,numeric_math_guess,4,[;[;-;[,"-: Sub (pure, 0) ; [: Add (pure, -1)","{""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 9, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}, ""["": {""symbol"": ""["", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", -1], 3], [[""add-1"", ""direct"", 0], 3], [[""digit_add_mod10"", ""direct"", -1], 1]]}}","+: Mul (pure, 0)","{""symbol"": ""+"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: -1; sub: 0,add: -1; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,2400,2400
+b2e5c467,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+35@81 = 17
+95@97 = 831
+25@32 = 57
+Now, determine the result for: 61^07",9111,numeric_math_guess,3,@;@;@,"@: Add (reverse, 0)","{""@"": {""symbol"": ""@"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 10, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""digit_add_mod10"", ""direct"", 1], 1], [[""digit_sum_sum"", ""direct"", 0], 1]]}}","^: Mul (reverse, -1)","{""symbol"": ""^"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0,add: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,9111,9111
+b451be8a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+52@06 = 53@
+81<88 = 4851
+32<25 = 6911
+13<34 = 3331
+Now, determine the result for: 22%42",64,numeric_math_guess,4,@;<;<;<,"<: Mul (reverse, 0) ; @: Sub (reverse, 0)","{""<"": {""symbol"": ""<"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}, ""@"": {""symbol"": ""@"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 4, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""digit_absdiff"", ""direct"", -1], 1]]}}","%: Add (pure, 0)","{""symbol"": ""%"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0,diff: 0; mul: 0,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,TRUE,FALSE,plain,64,64
+9ef98294,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+05!93 = 9491
+42|64 = 07
+13!75 = 6671
+58|62 = 111
+43!68 = 3292
+Now, determine the result for: 89]25",64],numeric_math_guess,5,!;|;!;|;!,"!: Mul (reverse, -1) ; |: Add (reverse, 0)","{""!"": {""symbol"": ""!"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 3], [[""mul-1"", ""reverse"", 0], 3]]}, ""|"": {""symbol"": ""|"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2]]}}","]: Sub (pure, 0)","{""symbol"": ""]"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,suffix,64],64
+b8f00ea7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82:87 = :05
+41:15 = :73
+42:31 = 11
+11#21 = 32
+Now, determine the result for: 36\28",5615,numeric_math_guess,4,:;:;:;#,"#: Add (reverse, 0) ; :: AbsDiff (reverse, 0)","{""#"": {""symbol"": ""#"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""direct"", 0], 1], [[""add"", ""reverse"", 0], 1], [[""add-1"", ""direct"", 1], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""direct"", -1], 1]]}, "":"": {""symbol"": "":"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 25, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""rsub"", ""reverse"", 0], 2], [[""digit_absdiff"", ""reverse"", 0], 2], [[""digit_sub_mod10"", ""reverse"", 0], 2]]}}","\: Mul (reverse, -1)","{""symbol"": ""\\"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,5615,5615
+bba186c3,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+14-04 = 18
+99-07 = 961
+66*95 = 7
+Now, determine the result for: 71)42",704,numeric_math_guess,3,-;-;*,"*: Sub (reverse, 0) ; -: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1]]}}","): Mul (reverse, -1)","{""symbol"": "")"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,704,704
+bce10d97,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+41*84 = 8441
+45+21 = 66
+95+58 = 441
+21*83 = 8321
+Now, determine the result for: 31-45",2,numeric_math_guess,4,*;+;+;*,"*: Concat (reverse, 0) ; +: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 2], [[""rconcat"", ""direct"", 0], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1]]}}","-: Div (pure, 1)","{""symbol"": ""-"", ""operation"": ""Div"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""rare""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; concat: 0,add: 0; concat: 0,0,rare,Div,Div,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,2,2
+be5971d7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+09+17 = 161
+11+44 = 55
+43*07 = 0743
+Now, determine the result for: 18-32",-85,numeric_math_guess,3,+;+;*,"*: Concat (reverse, 0) ; +: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 1, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1]]}}","-: rsub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: 0; concat: 0,add: 0; concat: 0,0,diff,rsub,rsub,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,negative,-85,-85
+be877da5,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+09+03 = 0309
+56*05 = 1523
+77*02 = 1451
+Now, determine the result for: 93-91",02,numeric_math_guess,3,+;*;*,"*: Mul (reverse, 1) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 1, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1]]}}","-: Sub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; mul: 1,concat: 0; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,plain,02,02
+c2945f2c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+81+79 = 511
+19-41 = 7
+58-87 = 7
+Now, determine the result for: 07*79",1976,numeric_math_guess,3,+;-;-,"+: Add (reverse, 0) ; -: Div (reverse, 1)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Div"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""mod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2], [[""div"", ""reverse"", 1], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1]]}}","*: Mul (reverse, 1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; div: 1; sub: 0,add: 0; diff: 0; rare: 1,1,mul,Mul,Mul+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,1976,1976
+28f7012c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+47*91 = 6041
+62-33 = 7
+89-71 = 31
+Now, determine the result for: 41+75",7541,numeric_math_guess,3,*;-;-,"*: Mul (reverse, 0) ; -: AbsDiff (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""maxmodmin"", ""reverse"", 0], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""rmod"", ""reverse"", 0], 1]]}}","+: Concat (reverse, 0)","{""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mod: 0; mul: 0,diff: 0; mul: 0; rare: 0,0,concat,Concat,Concat,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,7541,7541
+c6961082,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+55'82 = '27
+27'50 = '23
+54'75 = '21
+84'23 = '61
+64'64 = 0
+Now, determine the result for: 69]99",6831,numeric_math_guess,5,';';';';',"': AbsDiff (pure, 0)","{""'"": {""symbol"": ""'"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 37, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 5], [[""rabs"", ""direct"", 0], 5], [[""rsub"", ""direct"", 0], 4], [[""rmod"", ""direct"", 0], 4], [[""maxmodmin"", ""direct"", 0], 4]]}}","]: Mul (pure, 0)","{""symbol"": ""]"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,5,TRUE,FALSE,FALSE,plain,6831,6831
+c6da25af,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+65+76 = 2573
+21:89 = 68
+13+76 = 7702
+Now, determine the result for: 16}95",121,numeric_math_guess,3,+;:;+,"+: Mul (reverse, 0) ; :: AbsDiff (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, "":"": {""symbol"": "":"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 8, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""direct"", 0], 1], [[""rsub"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","}: Add (reverse, 1)","{""symbol"": ""}"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; mul: 0,diff: 0; mul: 0,1,add,Add,Add+1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,121,121
+c763054a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+66*66 = 6666
+24*32 = 3224
+91*47 = 4791
+62+96 = 59
+29*55 = 5529
+Now, determine the result for: 97-12",85,numeric_math_guess,5,*;*;*;+;*,"*: Concat (reverse, 0) ; +: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 4, ""best_candidates"": [[[""concat"", ""reverse"", 0], 4], [[""rconcat"", ""direct"", 0], 4], [[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 4, ""best_candidates"": [[[""add"", ""reverse"", 0], 1], [[""add-1"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", -1], 1], [[""digit_add_mod10"", ""direct"", 1], 1]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; concat: 0,add: 0; concat: 0,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,85,85
+e33f1695,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+75'62 = 4650
+51'59 = 3009
+56'13 = 728
+64+59 = +5
+Now, determine the result for: 55^54",5554,numeric_math_guess,4,';';';+,"': Mul (pure, 0) ; +: Sub (pure, 0)","{""'"": {""symbol"": ""'"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 3], [[""mul-1"", ""direct"", 1], 3], [[""mul+1"", ""direct"", -1], 3]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""rabs"", ""direct"", 0], 1], [[""sub-1"", ""direct"", 1], 1], [[""sub+1"", ""direct"", -1], 1]]}}","^: Concat (pure, 0)","{""symbol"": ""^"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,mul: 0; sub: 0,diff: 0; mul: 0,0,concat,Concat,Concat,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,5554,5554
+c84544db,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+18|74 = |56
+61|89 = |28
+95|59 = 36
+13|99 = |86
+Now, determine the result for: 20#24",2024,numeric_math_guess,4,|;|;|;|,"|: AbsDiff (pure, 0)","{""|"": {""symbol"": ""|"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 15, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 4], [[""rabs"", ""direct"", 0], 4], [[""rsub"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""reverse"", 0], 2]]}}","#: Concat (pure, 0)","{""symbol"": ""#"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,2024,2024
+7a9711b1,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+71+77 = 148
+98+51 = 149
+56/43 = 13
+Now, determine the result for: 18}38",1838,numeric_math_guess,3,+;+;/,"+: Add (pure, 0) ; /: Sub (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2]]}, ""/"": {""symbol"": ""/"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""direct"", 0], 1]]}}","}: Concat (pure, 0)","{""symbol"": ""}"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; sub: 0,add: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,1838,1838
+d096a492,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+23*15 = 2361
+85*01 = 085
+71*68 = 2641
+99+55 = 5599
+Now, determine the result for: 98-33",-65,numeric_math_guess,4,*;*;*;+,"*: Mul (reverse, 0) ; +: Concat (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 3], [[""mul-1"", ""reverse"", 1], 3], [[""mul+1"", ""reverse"", -1], 3]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}}","-: rsub (pure, 0)","{""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,concat: 0; mul: 0,concat: 0; mul: 0,0,diff,rsub,rsub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,negative,-65,-65
+d17632d2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+41<21 = 2
+53&51 = 525
+23&09 = 0882
+25<51 = 7
+Now, determine the result for: 38\29",571,numeric_math_guess,4,<;&;&;<,"&: Mul (reverse, 0) ; <: Sub (reverse, 0)","{""&"": {""symbol"": ""&"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}, ""<"": {""symbol"": ""<"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 18, ""best_candidates"": [[[""mod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1]]}}","\: Add (reverse, 0)","{""symbol"": ""\\"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mod: 0; mul: 0; sub: 0,diff: 0; mul: 0; rare: 0,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,571,571
+d6baf5e6,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+64-01 = 63
+73+48 = 221
+65-42 = 23
+21-72 = -51
+78-25 = 53
+Now, determine the result for: 87*69",7847,numeric_math_guess,5,-;+;-;-;-,"+: Add (reverse, 1) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", 1], 1], [[""add+1"", ""reverse"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 4, ""candidate_count"": 25, ""best_candidates"": [[[""sub"", ""direct"", 0], 4], [[""sub"", ""reverse"", 0], 4], [[""sub-1"", ""direct"", 1], 4], [[""sub-1"", ""reverse"", 1], 4], [[""sub+1"", ""direct"", -1], 4]]}}","*: Mul (reverse, -1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: 1; sub: 0,add: 1; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,7847,7847
+549f5220,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+12+01 = 13
+77+25 = 921
+94-82 = 12
+85+13 = 98
+32-15 = 82
+Now, determine the result for: 48*55",5548,numeric_math_guess,5,+;+;-;+;-,"+: Add (pure, 0) ; -: Sub (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 12, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3], [[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 20, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""sub"", ""direct"", 0], 1], [[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""direct"", 0], 1]]}}","*: Concat (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0; sub: 0,add: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,5548,5548
+dc178d1c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+17""04 = 111
+29""45 = 641
+72""48 = 111
+Now, determine the result for: 65+69",04,numeric_math_guess,3,""";"";""",""": Add (reverse, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 3], [[""add-1"", ""reverse"", 1], 3], [[""add+1"", ""reverse"", -1], 3]]}}","+: AbsDiff (reverse, 0)","{""symbol"": ""+"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0,add: 0,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,04,04
+dcaf44c4,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+28-22 = 06
+06+41 = 4106
+09+13 = 1309
+Now, determine the result for: 24*95",8742,numeric_math_guess,3,-;+;+,"+: Concat (reverse, 0) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 2], [[""rconcat"", ""direct"", 0], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 7, ""best_candidates"": [[[""sub"", ""reverse"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1], [[""sub-1"", ""reverse"", 1], 1], [[""sub+1"", ""reverse"", -1], 1]]}}","*: Mul (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,8742,8742
+c885e697,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+66-83 = -82
+12+59 = 611
+55-54 = -01
+79+78 = 481
+Now, determine the result for: 34*82",8234,numeric_math_guess,4,-;+;-;+,"+: Add (reverse, 0) ; -: rsub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""rsub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 1, ""best_candidates"": [[[""rsub"", ""reverse"", 0], 2]]}}","*: Concat (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: 0; rsub: 0,add: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,2,FALSE,FALSE,FALSE,plain,8234,8234
+df92aa6a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+02+12 = 24
+23-25 = -02
+82+17 = 001
+94-63 = 31
+Now, determine the result for: 82*76",7682,numeric_math_guess,4,+;-;+;-,"+: Add (reverse, 1) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 6, ""best_candidates"": [[[""add"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", 0], 2], [[""digit_add_mod10"", ""reverse"", 1], 2], [[""mul"", ""direct"", 0], 1], [[""mul-1"", ""direct"", 1], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 18, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2], [[""sub"", ""direct"", 0], 1], [[""absdiff"", ""direct"", 0], 1]]}}","*: Concat (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,add: 1; sub: 0,add: 1; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,7682,7682
+e1728524,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+12&13 = 01
+57:58 = 161
+06&91 = 14&
+64:92 = 67
+87&89 = 02
+Now, determine the result for: 99/99",1089,numeric_math_guess,5,&;:;&;:;&,"&: AbsDiff (reverse, 0) ; :: Add (reverse, 1)","{""&"": {""symbol"": ""&"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 11, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""rsub"", ""reverse"", 0], 2], [[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2]]}, "":"": {""symbol"": "":"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", 0], 2]]}}","/: Mul (reverse, 0)","{""symbol"": ""/"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 1; sub: 0,add: 1; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,5,FALSE,TRUE,FALSE,plain,1089,1089
+e2f2bea4,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+61+75 = 7561
+19-54 = 64
+21-37 = -16
+Now, determine the result for: 29*26",3075,numeric_math_guess,3,+;-;-,"+: Concat (reverse, 0) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 11, ""best_candidates"": [[[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""reverse"", -1], 2], [[""absdiff"", ""reverse"", 0], 1], [[""rabs"", ""reverse"", 0], 1]]}}","*: Mul (reverse, -1)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,-1,mul,Mul,Mul-1,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,3075,3075
+e307429d,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+42\92 = 5\
+34/94 = 29
+82\67 = 84\
+71/14 = 85
+Now, determine the result for: 47[44",6523,numeric_math_guess,4,\;/;\;/,"/: Add (reverse, 0) ; \: AbsDiff (reverse, 0)","{""/"": {""symbol"": ""/"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 9, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""digit_add_mod10"", ""direct"", 1], 1], [[""add"", ""direct"", 0], 1]]}, ""\\"": {""symbol"": ""\\"", ""operation"": ""AbsDiff"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 7, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""rmod"", ""reverse"", 0], 1], [[""maxmodmin"", ""reverse"", 0], 1]]}}","[: Mul (reverse, 0)","{""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 0,add: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,4,FALSE,TRUE,FALSE,plain,6523,6523
+ed80cf3e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+56-78 = -22
+34-95 = -61
+67+11 = 1167
+Now, determine the result for: 31*14",1431,numeric_math_guess,3,-;-;+,"+: Concat (reverse, 0) ; -: Sub (reverse, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""reverse"", 0], 1], [[""rconcat"", ""direct"", 0], 1]]}, ""-"": {""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 6, ""best_candidates"": [[[""sub"", ""direct"", 0], 2], [[""sub"", ""reverse"", 0], 2], [[""sub-1"", ""direct"", 1], 2], [[""sub-1"", ""reverse"", 1], 2], [[""sub+1"", ""direct"", -1], 2]]}}","*: Concat (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Concat"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""concat""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,concat: 0; sub: 0,concat: 0; diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,1431,1431
+e4cc7639,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+62[83 = 5146
+99[39 = 3861
+14[53 = 742
+33[43 = 1419
+80!25 = 5
+Now, determine the result for: 48*64",113,numeric_math_guess,5,[;[;[;[;!,"!: Mod (pure, 0) ; [: Mul (pure, 0)","{""!"": {""symbol"": ""!"", ""operation"": ""Mod"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""mod"", ""direct"", 0], 1], [[""rdiv"", ""reverse"", -1], 1], [[""rmod"", ""reverse"", 1], 1], [[""maxmodmin"", ""direct"", 0], 1], [[""maxmodmin"", ""reverse"", 1], 1]]}, ""["": {""symbol"": ""["", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""support"": 4, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""direct"", 0], 4], [[""mul-1"", ""direct"", 1], 4], [[""mul+1"", ""direct"", -1], 4]]}}","*: Add (pure, 1)","{""symbol"": ""*"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""family"": ""add""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mod: 0; mul: 0,mul: 0; rare: 0,1,add,Add,Add+1,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,113,113
+afcac7af,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+47+15 = 421
+55+09 = 441
+71*66 = 3211
+Now, determine the result for: 01-91",-9,numeric_math_guess,3,+;+;*,"*: Mul (reverse, 1) ; +: Add (reverse, -1)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", 0], 1]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", -1], 2], [[""add-1"", ""reverse"", 0], 2]]}}","-: Sub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: -1; mul: 1,add: -1; mul: 1,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,negative,-9,-9
+b7ad0671,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+22@75 = 4521
+58-63 = 121
+37-45 = 721
+28@77 = 4136
+Now, determine the result for: 28:12",16,numeric_math_guess,4,@;-;-;@,"-: Add (reverse, 0) ; @: Mul (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 6, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2], [[""add"", ""direct"", 0], 1], [[""add-1"", ""direct"", 1], 1]]}, ""@"": {""symbol"": ""@"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 2], [[""mul-1"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", -1], 2]]}}",":: Sub (pure, 0)","{""symbol"": "":"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: 0,add: 0; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,16,16
+69fe4b0d,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+90#96 = 8639
+63^42 = 105
+61#74 = 4513
+31#74 = 2293
+58^68 = 126
+Now, determine the result for: 70-11",59,numeric_math_guess,5,#;^;#;#;^,"#: Mul (pure, -1) ; ^: Add (pure, 0)","{""#"": {""symbol"": ""#"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 3], [[""mul-1"", ""direct"", 0], 3]]}, ""^"": {""symbol"": ""^"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; mul: -1,add: 0; mul: -1,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,59,59
+ea6d926a,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+15-77 = 62
+78*32 = 2002
+41-05 = 8
+95*11 = 056
+Now, determine the result for: 25+62",87,numeric_math_guess,4,-;*;-;*,"*: Mul (reverse, 1) ; -: AbsDiff (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", 1], 2], [[""mul+1"", ""reverse"", 0], 2]]}, ""-"": {""symbol"": ""-"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 11, ""best_candidates"": [[[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2], [[""absdiff"", ""direct"", 0], 1], [[""absdiff"", ""reverse"", 0], 1], [[""rsub"", ""direct"", 0], 1]]}}","+: Add (pure, 0)","{""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; div: 0; mul: 1,diff: 0; mul: 1; rare: 0,0,add,Add,Add,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,plain,87,87
+ea829b32,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+85]82 = ]3
+33]83 = ]50
+98]60 = ]38
+87]79 = ]8
+Now, determine the result for: 54|97",151,numeric_math_guess,4,];];];],"]: Sub (pure, 0)","{""]"": {""symbol"": ""]"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 22, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 4], [[""rabs"", ""direct"", 0], 4], [[""sub"", ""direct"", 0], 3], [[""sub-1"", ""direct"", 1], 3], [[""sub+1"", ""direct"", -1], 3]]}}","|: Add (pure, 0)","{""symbol"": ""|"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""add""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,add,Add,Add,FALSE,0,TRUE,4,TRUE,FALSE,FALSE,plain,151,151
+ea9f3811,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+82+71 = 8271
+37{45 = 1666
+22+80 = 2280
+21+73 = 2173
+Now, determine the result for: 46}59",}13,numeric_math_guess,4,+;{;+;+,"+: Concat (pure, 0) ; {: Mul (pure, 1)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 3], [[""rconcat"", ""reverse"", 0], 2]]}, ""{"": {""symbol"": ""{"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", 1], 1], [[""mul+1"", ""direct"", 0], 1]]}}","}: AbsDiff (pure, 0)","{""symbol"": ""}"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,concat: 0; mul: 1,concat: 0; mul: 1,0,diff,AbsDiff,AbsDiff,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,prefix,}13,13
+ead0e1dd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+87`52 = 35
+65`02 = 63
+62`09 = `46
+Now, determine the result for: 63/38",911,numeric_math_guess,3,`;`;`,"`: Sub (pure, 0)","{""`"": {""symbol"": ""`"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 18, ""best_candidates"": [[[""absdiff"", ""reverse"", 0], 3], [[""rabs"", ""reverse"", 0], 3], [[""sub"", ""direct"", 0], 2], [[""sub"", ""reverse"", 0], 2], [[""absdiff"", ""direct"", 0], 2]]}}","/: Add (reverse, 0)","{""symbol"": ""/"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,add,Add,Add,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,911,911
+ec37a5e7,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+15*06 = 0603
+81*54 = 018
+35*55 = 5192
+46*95 = 6773
+82*78 = 6342
+Now, determine the result for: 42-59",-17,numeric_math_guess,5,*;*;*;*;*,"*: Mul (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 5, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 5], [[""mul-1"", ""reverse"", 1], 5], [[""mul+1"", ""reverse"", -1], 5]]}}","-: Sub (pure, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,mul: 0,mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,negative,-17,-17
+d809394c,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+20<92 = <72
+69<83 = <14
+48<31 = 17
+Now, determine the result for: 90/99",9099,numeric_math_guess,3,<;<;<,"<: AbsDiff (pure, 0)","{""<"": {""symbol"": ""<"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 20, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 3], [[""rabs"", ""direct"", 0], 3], [[""absdiff"", ""reverse"", 0], 2], [[""rsub"", ""direct"", 0], 2], [[""rabs"", ""reverse"", 0], 2]]}}","/: Concat (pure, 0)","{""symbol"": ""/"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""concat""}",pure,pure,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; sub: 0,diff: 0,0,concat,Concat,Concat,FALSE,0,TRUE,3,TRUE,FALSE,FALSE,plain,9099,9099
+eeae398e,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+63]67 = 4
+18]81 = 9
+72-22 = 95
+64]48 = 16
+65]15 = 5
+Now, determine the result for: 65/58",3770,numeric_math_guess,5,];];-;];],"-: Add (pure, 1) ; ]: AbsDiff (pure, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 1, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 1], 1], [[""add+1"", ""direct"", 0], 1], [[""digit_add_mod10"", ""direct"", 1], 1]]}, ""]"": {""symbol"": ""]"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 24, ""best_candidates"": [[[""maxmodmin"", ""direct"", 0], 4], [[""maxmodmin"", ""reverse"", 0], 3], [[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""rmod"", ""direct"", 0], 2]]}}","/: Mul (pure, 0)","{""symbol"": ""/"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; add: 1; mod: 0; sub: 0,add: 1; diff: 0; rare: 0,0,mul,Mul,Mul,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,3770,3770
+ef1b13ac,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+19$41 = 60
+51?71 = 5171
+85$70 = 155
+Now, determine the result for: 74+66",8,numeric_math_guess,3,$;?;$,"$: Add (pure, 0) ; ?: Concat (pure, 0)","{""$"": {""symbol"": ""$"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", 0], 2], [[""add-1"", ""direct"", 1], 2], [[""add+1"", ""direct"", -1], 2]]}, ""?"": {""symbol"": ""?"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}}","+: Sub (pure, 0)","{""symbol"": ""+"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: 0; concat: 0,add: 0; concat: 0,0,diff,Sub,Sub,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,8,8
+f2ff37b2,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+66^67 = 1
+87^60 = 27
+80+96 = 8096
+Now, determine the result for: 91(29",2639,numeric_math_guess,3,^;^;+,"+: Concat (pure, 0) ; ^: AbsDiff (pure, 0)","{""+"": {""symbol"": ""+"", ""operation"": ""Concat"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 2, ""best_candidates"": [[[""concat"", ""direct"", 0], 1], [[""rconcat"", ""reverse"", 0], 1]]}, ""^"": {""symbol"": ""^"", ""operation"": ""AbsDiff"", ""logic"": ""pure"", ""offset"": 0, ""support"": 1, ""candidate_count"": 23, ""best_candidates"": [[[""absdiff"", ""direct"", 0], 2], [[""rabs"", ""direct"", 0], 2], [[""maxmodmin"", ""direct"", 0], 2], [[""digit_absdiff"", ""direct"", 0], 2], [[""rsub"", ""direct"", 0], 1]]}}","(: Mul (pure, 0)","{""symbol"": ""("", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""mul""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; concat: 0; sub: 0,concat: 0; diff: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,2639,2639
+e9e6b620,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+69}44 = 112
+17}34 = 50
+91]83 = 7552
+10}39 = 48
+65]45 = 2924
+Now, determine the result for: 91+66",25,numeric_math_guess,5,};};];};],"]: Mul (pure, -1) ; }: Add (pure, -1)","{""]"": {""symbol"": ""]"", ""operation"": ""Mul"", ""logic"": ""pure"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""direct"", -1], 2], [[""mul-1"", ""direct"", 0], 2]]}, ""}"": {""symbol"": ""}"", ""operation"": ""Add"", ""logic"": ""pure"", ""offset"": -1, ""support"": 3, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""direct"", -1], 3], [[""add-1"", ""direct"", 0], 3], [[""digit_add_mod10"", ""direct"", -1], 1]]}}","+: Sub (pure, 0)","{""symbol"": ""+"", ""operation"": ""Sub"", ""logic"": ""pure"", ""offset"": 0, ""family"": ""diff""}",pure,pure,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,add: -1; mul: -1,add: -1; mul: -1,0,diff,Sub,Sub,FALSE,0,TRUE,5,FALSE,FALSE,FALSE,plain,25,25
+f971f8dd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+71]54 = 567
+32""79 = 5
+62""77 = 52
+Now, determine the result for: 88:34",131,numeric_math_guess,3,"];"";""",""": Div (reverse, 1) ; ]: Mul (reverse, 0)","{""\"""": {""symbol"": ""\"""", ""operation"": ""Div"", ""logic"": ""reverse"", ""offset"": 1, ""support"": 1, ""candidate_count"": 4, ""best_candidates"": [[[""rmod"", ""reverse"", 0], 2], [[""maxmodmin"", ""reverse"", 0], 2], [[""rdiv"", ""reverse"", 1], 1], [[""mod"", ""reverse"", -1], 1]]}, ""]"": {""symbol"": ""]"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}}",":: Add (reverse, 0)","{""symbol"": "":"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""add""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,mod: -1; mul: 0; rdiv: 1,"mul: 0; rare: -1,1",0,add,Add,Add,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,131,131
+f642e7b5,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+88*48 = 1937
+94+14 = 09
+79+29 = 981
+36*08 = 9305
+Now, determine the result for: 73-48",-74,numeric_math_guess,4,*;+;+;*,"*: Mul (reverse, -1) ; +: Add (reverse, 0)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 2, ""candidate_count"": 2, ""best_candidates"": [[[""mul"", ""reverse"", -1], 2], [[""mul-1"", ""reverse"", 0], 2]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 2, ""candidate_count"": 3, ""best_candidates"": [[[""add"", ""reverse"", 0], 2], [[""add-1"", ""reverse"", 1], 2], [[""add+1"", ""reverse"", -1], 2]]}}","-: Sub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: 0; mul: -1,add: 0; mul: -1,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,negative,-74,-74
+fb4bc935,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+69*47 = 4017
+28+26 = 341
+14+39 = 331
+45+56 = 811
+Now, determine the result for: 64-25",-6,numeric_math_guess,4,*;+;+;+,"*: Mul (reverse, 0) ; +: Add (reverse, -1)","{""*"": {""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 3, ""best_candidates"": [[[""mul"", ""reverse"", 0], 1], [[""mul-1"", ""reverse"", 1], 1], [[""mul+1"", ""reverse"", -1], 1]]}, ""+"": {""symbol"": ""+"", ""operation"": ""Add"", ""logic"": ""reverse"", ""offset"": -1, ""support"": 3, ""candidate_count"": 2, ""best_candidates"": [[[""add"", ""reverse"", -1], 3], [[""add-1"", ""reverse"", 0], 3]]}}","-: Sub (reverse, 0)","{""symbol"": ""-"", ""operation"": ""Sub"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""diff""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,add: -1; mul: 0,add: -1; mul: 0,0,diff,Sub,Sub,FALSE,0,TRUE,4,FALSE,FALSE,FALSE,negative,-6,-6
+fdd9ff2b,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
+24-99 = 51
+97-87 = 1
+02-73 = 71
+Now, determine the result for: 21*44",825,numeric_math_guess,3,-;-;-,"-: Mod (reverse, 0)","{""-"": {""symbol"": ""-"", ""operation"": ""Mod"", ""logic"": ""reverse"", ""offset"": 0, ""support"": 1, ""candidate_count"": 21, ""best_candidates"": [[[""maxmodmin"", ""reverse"", 0], 3], [[""rmod"", ""reverse"", 0], 2], [[""absdiff"", ""reverse"", 0], 2], [[""rabs"", ""reverse"", 0], 2], [[""digit_absdiff"", ""reverse"", 0], 2]]}}","*: Mul (reverse, 0)","{""symbol"": ""*"", ""operation"": ""Mul"", ""logic"": ""reverse"", ""offset"": 0, ""family"": ""mul""}",reverse,reverse,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,absdiff: 0; rmod: 0; sub: 0,diff: 0; rare: 0,0,mul,Mul,Mul,FALSE,0,TRUE,3,FALSE,FALSE,FALSE,plain,825,825
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,families in example,combos,operation in question,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,mul+diff,mul+0 offset+diff+no prefix/suffix+ mul example>= absdiff example,add+1,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,mul+diff,same math operator+mul+ offset of 1 +diff+no prefix/suffix+mul example>= absdiff example,add,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,mul+diff,mul +diff+no prefix/suffix+ mul example< abs diff,concat,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,mul+diff,mul+sub+0offset+prefix+ mul example>= sub example,concat,,,,,,,,,,,,,,,,,,,,,,,,,,
