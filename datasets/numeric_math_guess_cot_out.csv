@@ -352,7 +352,7 @@ Applying to 43*96:
   We recall that the question operator is not found in the examples. We will use 【subtraction (a-b)】 as the operator.
   reversed operands [43->34, 96->69] and reversed result
   subtraction (a-b) f(34, 69) = 34 - 69 = -35 -rev-> -53
-  Result is negative and op_char 【*】 is the subtraction symbol — replacing '-' with 【*】: -53 -> 【*53】
+  -53 -> 【*53】
   Result: 【*53】
 
 I will now return the answer in \boxed{}
@@ -5765,13 +5765,13 @@ Applying to 53:99:
   We recall that the question operator is not found in the examples. We will use 【subtraction (a-b)】 as the operator.
   identity
   subtraction (a-b) f(53, 99) = 53 - 99 = -46
-  Result is negative and op_char 【:】 is the subtraction symbol — replacing '-' with 【:】: -46 -> 【:46】
+  -46 -> 【:46】
   Result: 【:46】
 
 I will now return the answer in \boxed{}
 The answer in \boxed{–} is \boxed{:46}
 </think>
-\boxed{:46}",:46,TRUE,AbsDiff
+\boxed{:46}",:46,TRUE,Sub
 a87565bb,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
 46$71 = 74$
 64^78 = 6478
@@ -8489,13 +8489,13 @@ Applying to 46}59:
   We recall that the question operator is not found in the examples. We will use 【subtraction (a-b)】 as the operator.
   identity
   subtraction (a-b) f(46, 59) = 46 - 59 = -13
-  Result is negative and op_char 【}】 is the subtraction symbol — replacing '-' with 【}】: -13 -> 【}13】
+  -13 -> 【}13】
   Result: 【}13】
 
 I will now return the answer in \boxed{}
 The answer in \boxed{–} is \boxed{}13}
 </think>
-\boxed{}13}",}13,TRUE,AbsDiff
+\boxed{}13}",}13,TRUE,Sub
 ead0e1dd,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
 87`52 = 35
 65`02 = 63
@@ -9390,13 +9390,13 @@ Applying to 53)73:
   We recall that the question operator is not found in the examples. We will use 【subtraction (a-b)】 as the operator.
   reversed operands [53->35, 73->37] and reversed result
   subtraction (a-b) f(35, 37) = 35 - 37 = -2 -rev-> -2
-  Result is negative and op_char 【)】 is the subtraction symbol — replacing '-' with 【)】: -2 -> 【)2】
+  -2 -> 【)2】
   Result: 【)2】
 
 I will now return the answer in \boxed{}
 The answer in \boxed{–} is \boxed{)2}
 </think>
-\boxed{)2}",)2,TRUE,AbsDiff
+\boxed{)2}",)2,TRUE,Sub
 fb4bc935,"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:
 69*47 = 4017
 28+26 = 341

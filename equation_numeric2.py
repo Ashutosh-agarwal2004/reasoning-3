@@ -301,7 +301,7 @@ def _apply_op(found: FoundOp, a_str: str, b_str: str) -> tuple[str, list[str]]:
         steps.append(
             #f"Result is negative and op_char 【{found.op_char}】 is the subtraction symbol — "
             #f"replacing '-' with 【{found.op_char}】: {old} -> 【{final}】"
-            f"{old} -> 【{final}"
+            f"{old} -> 【{final}】"
         )
 
     return final, steps
@@ -325,6 +325,11 @@ _FAMILY_MAP: dict[str, str] = {
     "multiplication":             "mul",
     "multiply+1":                 "mul",
     "multiply-1":                 "mul",
+    "integer division (a/b)":     "div",
+    "modulo (a mod b)":           "div",
+    "reverse division (b/a)":     "div",
+    "reverse modulo (b mod a)":   "div",
+    "max mod min":                "div",
 }
 
 # The canonical (base) operation we will use when a family is selected for the

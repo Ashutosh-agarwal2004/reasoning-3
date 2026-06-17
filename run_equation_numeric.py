@@ -191,8 +191,8 @@ if __name__ == "__main__":
     #   argv[1]  — path to input CSV          (optional, defaults shown below)
     #   argv[2]  — path for output CSV         (optional)
     # -----------------------------------------------------------------------
-    default_csv = r"C:\Users\Ashutosh Agarwal\Downloads\numeric_math_guess_puzzles (1).csv"
-    default_out_csv = r"numeric_math_guess_cot_out.csv"
+    default_csv = r"datasets\mul_puzzle.csv"
+    default_out_csv = r"datasets\numeric_math_guess_cot_out1.csv"
 
     input_csv  = Path(sys.argv[1]) if len(sys.argv) > 1 else default_csv
     output_csv = default_out_csv  # Path(sys.argv[2]) if len(sys.argv) > 2 else default_out_csv

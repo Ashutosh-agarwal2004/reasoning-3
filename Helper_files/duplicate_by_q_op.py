@@ -26,12 +26,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--input",
-        default=r"C:\Users\Ashutosh Agarwal\Downloads\numeric_guess_files\reasoning 3\numeric_math_guess_cot_out.csv",
+        default=r"datasets\numeric_math_guess_cot_out.csv",
         help="Path to the input CSV file (default: numeric_math_guess_puzzles__1__cot.csv)",
     )
     parser.add_argument(
         "--output",
-        default= "Upsampled_data.csv",
+        default= "datasets\Upsampled_data2.csv",
         help="Path for the output CSV file (default: duplicated_output.csv)",
     )
     return parser.parse_args()
