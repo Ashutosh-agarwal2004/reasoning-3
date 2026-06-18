@@ -3,8 +3,8 @@ This is the Github repository to the Open Contribution Award submission for NVID
 
 Resources on Kaggle
 
-[Writeup]()
-[Notebook]()
+- [Writeup]()
+- [Notebook]()
 
 ## Executing scripts
 
