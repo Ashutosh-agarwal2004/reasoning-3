@@ -8,10 +8,13 @@ Resources on Kaggle
 
 ## Executing scripts
 
+- To generate COT for Equation Numeric Puzzle
 ```
-uv run python3 reasoning.py
-uv run python3 augmentation.py
-uv run python3 corpus.py
-uv run python3 train_sft.py
-uv run modal run upload_adapter.py
+python run_equation_numeric.py
 ```
+- To duplicate puzzles
+```
+python "Helper_files/duplicate_by_q_op.py"
+```  
+
+
