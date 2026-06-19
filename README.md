@@ -14,7 +14,7 @@ python run_equation_numeric.py
 ```
 - To duplicate puzzles
 ```
-python "Helper_files/duplicate_by_q_op.py"
+python Helper_files/duplicate_by_q_op.py
 ```  
 
 
