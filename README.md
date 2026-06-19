@@ -4,7 +4,7 @@ This is the Github repository to the Open Contribution Award submission for NVID
 Resources on Kaggle
 
 - [Writeup]()
-- [Notebook]()
+- [Notebook](https://www.kaggle.com/code/ashutoshagarwal088/end-to-end-finetuning-for-lb-0-83-6e2fa5)
 
 ## Executing scripts
 
